@@ -8,7 +8,7 @@
             </div>
             <div class="card col-6 mt-3">
                 <div class="card-header bg-success text-white text-center">
-                    <h5>Registrar Punto de Carga</h5>
+                    <h4>Registrar Punto de Carga</h4>
                 </div>
                 <div class="card-body">
                     <div class="col-6 mb-3">
@@ -64,7 +64,7 @@
                     </div>
                 </div>
                 <div class="card-footer d-grid gap-1">
-                    <asp:Button runat="server" ID="ingresarBtn" CssClass="btn btn-danger" Text="Registrar"
+                    <asp:Button runat="server" ID="ingresarBtn" style="font-size:larger" CssClass="btn btn-danger" Text="Registrar"
                         OnClick="ingresarBtn_Click" />
                 </div>
             </div>
