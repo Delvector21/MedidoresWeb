@@ -9,6 +9,9 @@
                 </ProgressTemplate>
             </asp:UpdateProgress>
             <div class="row col-8 mt-5 mx-auto">
+                <div class="mx-auto">
+                <asp:Label ID="mensajeLbl" CssClass="text-success h1" runat="server"></asp:Label>
+            </div>
                 <div class="row col-2 mx-auto">
                     <asp:DropDownList ID="tipoDdl" runat="server"
                         AutoPostBack="true"
@@ -24,7 +27,7 @@
                 <div class="mt-2">
 
                 <asp:GridView ID="puntosGrid" runat="server"
-                    AutoGenerateColumns="false" CssClass="table table-hover text-center" OnRowCommand="puntosGrid_RowCommand"
+                    AutoGenerateColumns="false" CssClass="table table-hover text-center table-dark" OnRowCommand="puntosGrid_RowCommand"
                     EmptyDataText="No hay Puntos en el sistema">
                     <Columns>
                         <asp:BoundField HeaderText="Codigo" DataField="Codigo" />
@@ -36,7 +39,7 @@
                                 <asp:Button ID="Button1" runat="server" Text="Eliminar" CssClass="btn btn-danger"
                                     CommandName="eliminar"
                                     CommandArgument='<%# Eval("Codigo")%>' />
-                                 <asp:Button ID="Button2" runat="server" Text="Editar" CssClass="btn btn-warning"
+                                 <asp:Button ID="Button2" runat="server" Text="Editar" CssClass="btn btn-info"
                                     CommandName="editar" 
                                     CommandArgument='<%# Eval("Codigo")%>' />
                             </ItemTemplate>

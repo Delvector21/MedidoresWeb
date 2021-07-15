@@ -30,5 +30,10 @@ namespace Medidores_DAL.DAL
             estaciones.Remove(estacion);
         }
 
+        public Estacion GetEstacion(string codigo)
+        {
+            return estaciones.Find(e => e.Codigo == codigo);
+        }
+
     }
 }

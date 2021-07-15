@@ -5,14 +5,14 @@
             <div>
                 <asp:Label ID="mensajeLbl" CssClass="text-success h1" runat="server"></asp:Label>
             </div>
-            <div class="card col-8">
+            <div class="card col-8 mt-3">
                 <div class="card-header bg-success text-white text-center">
                     <h5>Registrar Punto de Carga</h5>
                 </div>
                 <div class="card-body">
                     <div class="mb-3">
                         <label class="form-label" for="codigoTxt">Codigo</label>
-                        <asp:TextBox runat="server" ID="codigoTxt" CssClass="form-control"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="codigoTxt" ReadOnly="true" CssClass="form-control"></asp:TextBox>
                     </div>
                     <div class="row mb-3">
                         <label class="form-label" for="tipoRbl">Tipo</label>
@@ -56,7 +56,7 @@
                     </div>
                 </div>
                 <div class="card-footer d-grid gap-1">
-                    <asp:Button runat="server" ID="ingresarBtn" CssClass="btn btn-dark" Text="Registrar"
+                    <asp:Button runat="server" ID="ingresarBtn" CssClass="btn btn-danger" Text="Editar"
                         OnClick="ingresarBtn_Click" />
                 </div>
             </div>

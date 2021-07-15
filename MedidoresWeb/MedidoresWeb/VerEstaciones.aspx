@@ -9,7 +9,7 @@
             <div class="col-8 mt-5 mx-auto">
 
                 <asp:GridView ID="estacionesGrid" runat="server"
-                    AutoGenerateColumns="false" CssClass="table table-hover" OnRowCommand="estacionesGrid_RowCommand"
+                    AutoGenerateColumns="false" CssClass="table table-hover border-info" OnRowCommand="estacionesGrid_RowCommand"
                     EmptyDataText="No hay estaciones registradas">
                     <Columns>
                         <asp:BoundField HeaderText="Codigo" DataField="Codigo" />

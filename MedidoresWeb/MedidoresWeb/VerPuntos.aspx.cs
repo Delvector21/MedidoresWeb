@@ -35,7 +35,12 @@ namespace MedidoresWeb
                 CargarTabla(dal.GetAll());
             }
 
-            //if (e.CommandName == "editar")
+            if (e.CommandName == "editar")
+            {
+                string codigo = e.CommandArgument.ToString();
+                Response.Redirect(string.Format("EditarPunto.aspx?Codigo={0}",codigo));
+
+            }
            
         }
 

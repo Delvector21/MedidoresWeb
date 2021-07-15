@@ -1,21 +1,24 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AgregarEstacion.aspx.cs" Inherits="MedidoresWeb.AgregarEstacion" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Contenido" runat="server">
-    <div>
-        <asp:Label ID="mensajeLbl" CssClass="text-success h1" runat="server"></asp:Label>
+    <div class="col-8 mx-auto">
+        <asp:Label ID="mensajeLbl" CssClass="text-success h2" runat="server"></asp:Label>
     </div>
 
     <div class="card col-4 mt-5 mx-auto">
         <div class="card-header bg-primary text-white text-center">
-            <h5>Ingresar Estacion</h5>
+            <h4>Ingresar Estacion</h4>
         </div>
         <div class="card-body">
 
             <div class="form-group">
                 <label for="codigoTxt">Codigo</label>
                 <asp:TextBox ID="codigoTxt" runat="server" CssClass="form-control"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
-                    ErrorMessage="Debe ingresar un codigo" CssClass="text-danger"
-                    ControlToValidate="codigoTxt"></asp:RequiredFieldValidator>
+                <asp:CustomValidator ID="codigoCV" runat="server" ErrorMessage="CustomValidator"
+                     CssCLass="text-danger"
+                     ControlToValidate="codigoTxt"
+                     OnServerValidate="codigoCV_ServerValidate"
+                     validateEmptyText="true"  
+                     ></asp:CustomValidator>
             </div>
             <div class="form-group">
                 <label for="direccionTxt">Direccion</label>
@@ -49,7 +52,7 @@
 
         </div>
         <div class="card-footer d-grid gap-1">
-            <asp:Button runat="server" ID="ingresarBtn" CssClass="btn btn-dark" Text="Registrar"
+            <asp:Button runat="server" ID="ingresarBtn" CssClass="btn btn-danger" style="font-size:x-large" Text="Registrar" 
                 OnClick="ingresarBtn_Click" />
 
 

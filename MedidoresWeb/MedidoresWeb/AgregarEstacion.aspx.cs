@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Web.UI.WebControls;
 using Medidores_DAL.DAL;
 using Medidores_DAL.DTO;
 
@@ -8,6 +9,7 @@ namespace MedidoresWeb
 {
     public partial class AgregarEstacion : System.Web.UI.Page
     {
+        EstacionesDAL dal = new EstacionesDAL();
        
 
         protected void Page_Load(object sender, EventArgs e)
@@ -46,6 +48,29 @@ namespace MedidoresWeb
                 mensajeLbl.Text = "Estacion Ingresada";
                 limpiar();
     }
+        }
+
+        protected void codigoCV_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            string codigo = codigoTxt.Text.Trim();
+
+            if (codigo == string.Empty)
+            {
+                codigoCV.ErrorMessage = "Debe ingresar un Codigo";
+                args.IsValid = false;
+            }
+            else
+            {
+                if (dal.GetEstacion(codigo) != null)
+                {
+                    codigoCV.ErrorMessage = "El Codigo ya esta en uso";
+                    args.IsValid = false;
+                }
+                else
+                {
+                    args.IsValid = true;
+                }
+            }
         }
 
         private void limpiar()
