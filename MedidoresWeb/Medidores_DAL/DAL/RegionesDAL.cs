@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Medidores_DAL.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Medidores_DAL.DTO
+namespace Medidores_DAL.DAL
+
 {
     public class RegionesDAL
     {

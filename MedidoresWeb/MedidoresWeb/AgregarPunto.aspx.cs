@@ -1,5 +1,5 @@
-﻿using Medidores_DAL.DAL;
-using Medidores_DAL.DTO;
+﻿using MedidoresDAL.DAL;
+using MedidoresDAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -66,10 +66,10 @@ namespace MedidoresWeb
                 String fecha = fechaTxt.Text.Trim();
 
                 Punto p = new Punto();
-                p.Codigo = codigo;
-                p.Tipo = tipo;
-                p.Capacidad = capacidad;
-                p.Vidautil = fecha;
+                p.codigo = codigo;
+                p.tipo = tipo;
+                p.capacidad = capacidad;
+                p.vidautil = fecha;
 
                 new PuntosDAL().Add(p);
 

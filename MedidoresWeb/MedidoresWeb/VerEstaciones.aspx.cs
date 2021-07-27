@@ -1,5 +1,5 @@
-﻿using Medidores_DAL.DAL;
-using Medidores_DAL.DTO;
+﻿using MedidoresDAL.DAL;
+using MedidoresDAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;

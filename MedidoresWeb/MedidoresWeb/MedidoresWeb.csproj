@@ -44,6 +44,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\MedidoresDAL\bin\Debug\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
@@ -145,9 +149,9 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Medidores_DAL\Medidores_DAL.csproj">
-      <Project>{a90c9df3-70b9-491a-8c16-7f338e6c9b8c}</Project>
-      <Name>Medidores_DAL</Name>
+    <ProjectReference Include="..\MedidoresDAL\MedidoresDAL.csproj">
+      <Project>{17693877-dc3a-4a33-ab00-d17d6af48c9b}</Project>
+      <Name>MedidoresDAL</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

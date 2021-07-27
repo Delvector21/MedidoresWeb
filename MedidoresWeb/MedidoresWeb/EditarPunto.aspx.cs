@@ -1,5 +1,5 @@
-﻿using Medidores_DAL.DAL;
-using Medidores_DAL.DTO;
+﻿using MedidoresDAL.DAL;
+using MedidoresDAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,9 +22,9 @@ namespace MedidoresWeb
                 String codigo = Request.QueryString["Codigo"];
                 codigoTxt.Text = codigo;
                 Punto p = dal.GetPunto(codigo);
-                capacidadTxt.Text = p.Capacidad.ToString();
-                fechaTxt.Text = p.Vidautil;
-                tipoRbl.SelectedValue = p.Tipo.ToString();
+                capacidadTxt.Text = p.capacidad.ToString();
+                fechaTxt.Text = p.vidautil;
+                tipoRbl.SelectedValue = p.tipo.ToString();
 
 
             }
@@ -68,10 +68,10 @@ namespace MedidoresWeb
                 String fecha = fechaTxt.Text.Trim();
 
                 Punto p = new Punto();
-                p.Codigo = codigo;
-                p.Tipo = tipo;
-                p.Capacidad = capacidad;
-                p.Vidautil = fecha;
+                p.codigo = codigo;
+                p.tipo = tipo;
+                p.capacidad = capacidad;
+                p.vidautil = fecha;
 
                 new PuntosDAL().Editar(p);
                

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0089b1686b8f49afbffb93b09d1bf94d" Name="Diagram1">
+        <EntityTypeShape EntityType="Medidores_dbModel.Estacion" Width="2.375" PointX="4" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Medidores_dbModel.Punto" Width="2.25" PointX="8.125" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Medidores_dbModel.Region" Width="1.875" PointX="0.5" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="Medidores_dbModel.fk_estacion_region" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

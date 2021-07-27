@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.UI.WebControls;
-using Medidores_DAL.DAL;
-using Medidores_DAL.DTO;
-
+using MedidoresDAL;
+using MedidoresDAL.DAL;
 
 namespace MedidoresWeb
 {
@@ -37,11 +36,11 @@ namespace MedidoresWeb
                 string region = regionesDdl.SelectedValue;
 
                 Estacion esta = new Estacion();
-                esta.Codigo = codigo;
-                esta.Direccion = direccion;
-                esta.Ciudad = ciudad;
-                esta.Capacidad = capacidad;
-                esta.Region = region;
+                esta.codigo = codigo;
+                esta.direccion = direccion;
+                esta.ciudad = ciudad;
+                esta.capacidad = capacidad;
+                esta.region = region;
 
                 new EstacionesDAL().Add(esta);
 
